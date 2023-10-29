@@ -1,0 +1,138 @@
+.quickBooking {
+  background-color: #000;
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+  height: 50px;
+  position: relative;
+
+  &__fixed {
+    position: fixed!important;
+    right: 0!important;
+    bottom: 0!important;
+    left: 0!important;
+    z-index: 1030!important;
+  }
+  
+  &:before {
+    @include pseudo;
+    background-color: #131313;
+    height: 100%;
+    width: 140px;
+    left: 0;
+  }
+
+  &__title {
+    @include bp-xl{ padding: 0 30px 0 0; }
+    height: 50px;
+    background: #131313;
+    z-index: 1;
+    color: #f8f9fa;
+    &:after {
+      @include bp-es{ display: none }
+      @include pseudo;
+      top: 0;
+      right: -34px;
+      border-top: 50px solid transparent;
+      border-left: 50px solid #131313;
+    }
+  }
+
+  &__booth {
+    @include font-size(14px);
+    height: 50px;
+  }
+
+  &__name {
+    @include transition(all .5s ease);
+  }
+
+  &__slash {
+    right: -85px;
+    width: 100px;
+    overflow: hidden;
+    &:after {
+      @include pseudo;
+      width: 10px;
+      height: 100px;
+      top: -25px;
+      background: #131313;
+      transform: rotate(-44deg);
+      right: 50px;
+    }
+  }
+
+  &__text {
+    @include bp-sm{ width: 75% }
+    width: 100%;
+    border-bottom: 1px solid #151515;
+    height: 28px;
+    padding: 5px 2px;
+    color: #ddd;
+    overflow: hidden;
+  }
+
+  &__line {
+    @include transition(all .3s ease);
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    background: #ab8000;
+  }
+
+  &__menu {
+    @include transition(all .3s ease);
+    @include bp-sm{ bottom: 40px; top: inherit; max-height: 200px; overflow-y: scroll; border-radius: 5px }
+    top: 80px;
+    left: 0;
+    background: #131313;
+    padding: 2px 15px;
+    box-sizing: border-box;
+    font-size: 13px;
+    width: 100%;
+    z-index: 999;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #1b1b1b; 
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #313131; 
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    & ul {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    @include transition(all .3s ease);
+    padding: 5px 0;
+    color: #969696;
+    cursor: pointer;
+    border-bottom: 1px solid #272727;
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__mobile {
+    @include transition(all .3s ease);
+    background: url('/assets/backgrounds/menubg.png') #000 center no-repeat;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 999;
+
+    &--icon {
+      width: 40px;
+      height: 40px;
+    }
+
+  }
+
+}

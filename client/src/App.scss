@@ -1,0 +1,49 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+@import 'styles/reset';
+// header
+@import 'styles/header';
+// body
+@import 'styles/slider';
+@import 'styles/movie';
+@import 'styles/banner';
+@import 'styles/news';
+@import 'styles/promotion';
+@import 'styles/quickbook';
+// pages
+@import 'styles/pages/movieListPage';
+@import 'styles/pages/moviePage';
+@import 'styles/pages/bookingPage';
+// footer
+@import 'styles/footer';
+@import 'styles/nav';
+
+body {
+  background: #080808;
+}
+.page {
+  & .breadcrumb { background-color: #1b1b1b }
+  &__body {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+    h2 {
+      font-size: 1.5rem;
+      color: #ff3a3a;
+    }
+  }
+}
+
+.message {
+  @include transition(all .3s ease);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: max-content;
+}
+
+.checkout__title {
+  color: #777;
+  font-size: .8rem;
+}

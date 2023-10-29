@@ -1,0 +1,26 @@
+a {
+	@include transition(all .3s ease);
+	color: #f8f9fa!important;
+	&:hover {
+		color: $primary-color!important;
+		text-decoration: none;
+	}
+}
+
+p {
+	margin-bottom: 5px;
+}
+
+ul, li {
+	list-style-type: none;
+	padding: 0;
+}
+
+button, input {
+  outline: none!important;
+}
+
+.form-control:focus {
+	box-shadow: none!important;
+	border-color: inherit!important;
+}

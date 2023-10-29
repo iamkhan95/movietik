@@ -1,0 +1,60 @@
+.slider {
+	background-color: #101010;
+	@include transition(all .3s ease);
+
+	&__nav {
+    z-index: 99;
+		top: 60px;
+		@include bp-sm{ top: 145px }
+		@include bp-lg{ top: 205px }
+		@include bp-xl{ top: 240px }
+		
+		& .owl-prev, .owl-next {
+			@include transition(all .3s ease);
+			@include bp-sm{ font-size: 6rem }
+			color: #fff;
+			opacity: .2;
+			position: absolute;
+			background: transparent;
+			border: none;
+			font-size: 4rem;
+			line-height: 0;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		& .owl-prev {
+			left: 0;
+		}
+
+		& .owl-next {
+			right: 0;
+		}
+	}
+
+	&__dot {
+		bottom: 10px;
+		z-index: 99;
+		
+		& .owl-dot {
+			@include transition(all .3s ease);
+			cursor: pointer;
+			border-radius: 50%;
+			width: 15px;
+			height: 15px;
+			border: none;
+			margin: 0 4px;
+			opacity: .3;
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		& > .active {
+			opacity: 1;
+		}
+
+	}
+}

@@ -1,0 +1,100 @@
+.bookingPage {
+
+  &__nav {
+    background: #0a0a0a;
+    color: #797979;
+    a {
+      @include transition(all .3s ease);
+      color: #797979!important;
+      &:hover {
+        color: #fff!important;
+      }
+    }
+  }
+
+  &__step {
+    @include transition(all .3s ease);
+    border-bottom: 1px solid;
+    border-color: transparent;
+    padding: 20px 0;
+    text-align: center;
+    @include bp-es{ font-size: .6rem }
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      border-color: $primary-color;
+    }
+    &.active {
+      color: #fff;
+      border-color: $primary-color;
+    }
+  }
+
+  &__btn {
+    @include transition(all .3s ease);
+    color: rgba(255,255,255,.5);
+    background: none;
+    font-size: 2.2rem;
+    top: -4px;
+    cursor: pointer;
+    &:hover {
+      color: #f8f9fa;
+    }
+  }
+
+  &__count {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__seat {
+    @include transition(all .3s ease);
+    background: #333;
+    padding: .3rem;
+    line-height: 2;
+    font-size: .7rem;
+    @include bp-xl{ font-size: .9rem }
+    cursor: pointer;
+    &:hover {
+      background: #222;
+    }
+    &.active {
+      background: #dc3545!important;
+    }
+    &.deactive {
+      background: #1b1b1b!important;
+      color: #aaa!important;
+      cursor: not-allowed!important;
+    }
+  }
+
+  &__container {
+    margin: 0 -5px;
+  }
+
+  &__col {
+    width: 10%;
+  }
+  
+  &__input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #383838;
+    margin-bottom: 30px;
+    color: #fff;
+    transition: all .3s ease;
+    &:focus {
+      border-color: #dc3545;
+    }
+  }
+
+  &__label {
+    font-size: .8rem;
+    display: block;
+    margin-bottom: 0;
+    color: $primary-color;
+  }
+
+}

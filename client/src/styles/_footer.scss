@@ -1,0 +1,56 @@
+.footer {
+	background: url('/assets/backgrounds/footerbg.png') rgba(8,8,8,1);
+	background-size: cover;
+	color: #999;
+
+	&__title {
+		@include font-size(14px);
+		color: $primary-color;
+		line-height: 2;
+	}
+
+	&__list {
+		@include font-size(14px);
+    line-height: 1.8;
+	}
+
+  &__link {
+    color: #999!important;
+    &:hover {
+      color: $primary-color!important;
+    }
+  }
+
+	&__text {
+		@include font-size(13px);
+		margin-bottom: 5px;
+	}
+
+	&__logo {
+		background-image: url('/assets/icons/common_sprite_area.png');
+    background-position: -145px -319px;
+    height: 50px;
+    width: 120px;
+    margin-top: 30px;
+	}
+
+	&__icon {
+		@include transition(all .3s ease);
+		width: 40px;
+		height: 40px;
+		border: 1px solid #999;
+		cursor: pointer;
+		&:hover {
+			color: $primary-color;
+			border-color: $primary-color;
+		}
+	}
+
+	&__permission {
+    height: 70px;
+    position: relative;
+    text-indent: -9999px;
+    background: url('/assets/icons/cong-thuong.PNG') no-repeat scroll top left transparent;
+	}
+
+}
